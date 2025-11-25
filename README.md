@@ -75,7 +75,7 @@ qc
 
 ```r
 qc <- nhanes_qc("DEMO_H.xpt")
-summary(qc)
+qc
 ```
 
 ### 3. Run QC on a data frame
@@ -88,12 +88,99 @@ qc <- nhanes_qc(demo_h)
 qc
 ```
 
-### 4. Plot missingness and special codes
+```r
+NHANES QC result
+
+File:   <data.frame input>
+Rows:   10175
+Cols:   47
+
+Variable summary (preview):
+# A tibble: 6 × 5
+  variable class   n_missing prop_missing n_unique
+  <chr>    <chr>       <int>        <dbl>    <int>
+1 seqn     numeric         0        0        10175
+2 sddsrvyr factor          0        0            1
+3 ridstatr factor          0        0            2
+4 riagendr factor          0        0            2
+5 ridageyr numeric         0        0           81
+6 ridagemn numeric      9502        0.934       26
+... (41 more variables)
+
+Missingness / special codes (preview):
+# A tibble: 4 × 6
+  variable  n_na prop_na n_special prop_special special_codes_found
+  <chr>    <int>   <dbl>     <int>        <dbl> <chr>              
+1 ridageyr     0   0           484      0.0476  7, 77, 9           
+2 ridagemn  9502   0.934        76      0.00747 7, 9               
+3 ridexagm  5962   0.586       110      0.0108  7, 77, 9, 99       
+4 dmdhrage     0   0            46      0.00452 77                 
+
+Use:
+  qc$variables    # full variable summary
+  qc$missingness  # full missingness / special-code summary
+```
+
+### 3. Summary of QC
+
+```r
+summary(qc)
+```
+
+```
+Summary of NHANES QC result
+
+Dimensions:
+  Rows:   10175
+  Cols:   47
+
+Overall missingness (across all cells):
+  Total missing values: 82092
+  Proportion missing:   0.172
+
+Variables with missing values:      26
+Variables with special codes found: 4
+
+Top variables by proportion missing (up to 10):
+# A tibble: 10 × 3
+   variable  n_na prop_na
+   <chr>    <int>   <dbl>
+ 1 dmqadfc   9632   0.947
+ 2 ridagemn  9502   0.934
+ 3 ridexprg  8866   0.871
+ 4 dmdyrsus  8267   0.812
+ 5 dmdeduc3  7372   0.725
+ 6 ridexagm  5962   0.586
+ 7 dmdhsedu  4833   0.475
+ 8 dmdeduc2  4406   0.433
+ 9 dmdmartl  4406   0.433
+10 dmqmiliz  3914   0.385
+
+Variables with NHANES-style special codes (up to 10):
+# A tibble: 4 × 4
+  variable n_special prop_special special_codes_found
+  <chr>        <int>        <dbl> <chr>              
+1 ridageyr       484      0.0476  7, 77, 9           
+2 ridexagm       110      0.0108  7, 77, 9, 99       
+3 ridagemn        76      0.00747 7, 9               
+4 dmdhrage        46      0.00452 77       
+```
+
+### 4. Plot missingness
 
 ```r
 plot(qc)                     # missingness
+```
+
+<img src="man/figures/missingness_demo.png" width="600"/>
+
+### 5. Plot special codes
+
+```r
 plot(qc, type = "special")   # NHANES special codes
 ```
+
+<img src="man/figures/specialcodes_demo.png" width="600"/>
 
 ---
 
@@ -109,4 +196,4 @@ A future version will include codebook-aware recoding.
 
 ## License
 
-MIT License.
+MIT License. See `LICENSE` for details
