@@ -1,0 +1,19 @@
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>/404.html</loc></url>
+<url><loc>/LICENSE-text.html</loc></url>
+<url><loc>/LICENSE.html</loc></url>
+<url><loc>/articles/index.html</loc></url>
+<url><loc>/articles/nhanesqc-intro.html</loc></url>
+<url><loc>/authors.html</loc></url>
+<url><loc>/index.html</loc></url>
+<url><loc>/reference/index.html</loc></url>
+<url><loc>/reference/nhanes_missingness_summary.html</loc></url>
+<url><loc>/reference/nhanes_qc.html</loc></url>
+<url><loc>/reference/nhanes_variable_summary.html</loc></url>
+<url><loc>/reference/plot.nhanes_qc_result.html</loc></url>
+<url><loc>/reference/print.nhanes_qc_result.html</loc></url>
+<url><loc>/reference/read_nhanes_csv.html</loc></url>
+<url><loc>/reference/read_nhanes_xpt.html</loc></url>
+<url><loc>/reference/summary.nhanes_qc_result.html</loc></url>
+</urlset>
+
