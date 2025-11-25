@@ -194,6 +194,12 @@ A future version will include codebook-aware recoding.
 
 ---
 
+## Disclaimer
+
+This package is an independent, open-source project and is not affiliated with or endorsed by the CDC or NHANES.
+
+---
+
 ## License
 
 MIT License. See `LICENSE` for details
