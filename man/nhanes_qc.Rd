@@ -2,17 +2,21 @@
 % Please edit documentation in R/nhanes_qc.R
 \name{nhanes_qc}
 \alias{nhanes_qc}
-\title{Quick QC for a NHANES-style file (CSV or XPT)}
+\title{Quick QC for a NHANES-style dataset (CSV, XPT, or data frame)}
 \usage{
 nhanes_qc(
-  path,
+  x,
   special_codes = c(7, 9, 77, 99, 777, 999, 7777, 9999),
   exclude_vars = c("seqn"),
   ...
 )
 }
 \arguments{
-\item{path}{Path to a NHANES file. Must have extension \code{.csv} or \code{.xpt}.}
+\item{x}{Either:
+\itemize{
+\item a character string giving a file path to a NHANES file (\code{.csv} or \code{.xpt}), or
+\item a data frame / tibble containing NHANES-style data.
+}}
 
 \item{special_codes}{A vector of special missing codes to scan for.
 Passed to \code{\link[=nhanes_missingness_summary]{nhanes_missingness_summary()}}.}
@@ -20,16 +24,16 @@ Passed to \code{\link[=nhanes_missingness_summary]{nhanes_missingness_summary()}
 \item{exclude_vars}{Variables to exclude from special-code detection
 (for example, ID variables like "seqn").}
 
-\item{...}{Additional arguments passed to the underlying reader:
-\code{\link[readr:read_delim]{readr::read_csv()}} for CSV, \code{\link[haven:read_xpt]{haven::read_xpt()}} for XPT.}
+\item{...}{Additional arguments passed to the underlying reader when \code{x}
+is a file path: \code{\link[readr:read_delim]{readr::read_csv()}} for CSV, \code{\link[haven:read_xpt]{haven::read_xpt()}} for XPT.}
 }
 \value{
 A list with:
 \itemize{
-\item \code{path} - the file path provided
+\item \code{path} - the file path provided, or \code{"<data.frame input>"}
 \item \code{n_rows} - number of rows in the data
 \item \code{n_cols} - number of columns in the data
-\item \code{data} - the loaded data (tibble)
+\item \code{data} - the loaded/processed data (tibble)
 \item \code{variables} - variable-level summary (from \code{\link[=nhanes_variable_summary]{nhanes_variable_summary()}})
 \item \code{missingness} - missingness + special-code detection summary
 (from \code{\link[=nhanes_missingness_summary]{nhanes_missingness_summary()}}, \verb{$summary} component)
@@ -38,14 +42,19 @@ A list with:
 \description{
 High-level helper that:
 \itemize{
+\item accepts either a file path \strong{or} an in-memory data frame
+\item if a path is provided:
+\itemize{
 \item reads a NHANES-style file (CSV or XPT)
+}
 \item summarizes variables with \code{\link[=nhanes_variable_summary]{nhanes_variable_summary()}}
 \item detects NHANES-style special missing codes with \code{\link[=nhanes_missingness_summary]{nhanes_missingness_summary()}}
 }
 
 Supported inputs:
 \itemize{
-\item \code{.csv} files via \code{\link[=read_nhanes_csv]{read_nhanes_csv()}}
-\item \code{.xpt} (SAS transport) files via \code{\link[=read_nhanes_xpt]{read_nhanes_xpt()}}
+\item Character path to \code{.csv} files via \code{\link[=read_nhanes_csv]{read_nhanes_csv()}}
+\item Character path to \code{.xpt} (SAS transport) files via \code{\link[=read_nhanes_xpt]{read_nhanes_xpt()}}
+\item A data frame or tibble already in memory (e.g., from \code{\link[nhanesA:nhanes]{nhanesA::nhanes()}})
 }
 }

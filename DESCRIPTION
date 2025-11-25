@@ -1,9 +1,13 @@
 Package: nhanesqc
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Title: Quick Quality Control for NHANES Datasets
+Version: 0.0.0.1
 Authors@R: 
-    person("Chayce", "Reed", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+    person("Chayce", "Reed", 
+        email = "code.jcr@gmail.com", 
+        role = c("aut", "cre"))
+Description: Tools for quick, structured quality control of NHANES datasets,
+    including variable summaries, missingness diagnostics, and detection
+    of NHANES-style special missing codes.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
@@ -15,3 +19,8 @@ Imports:
     purrr,
     readr,
     tibble
+Suggests: 
+    knitr,
+    rmarkdown,
+    nhanesA
+VignetteBuilder: knitr

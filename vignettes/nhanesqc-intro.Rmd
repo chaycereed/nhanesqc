@@ -1,0 +1,124 @@
+---
+title: "nhanesqc: Introduction"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{nhanesqc: Introduction}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.width = 7,
+  fig.height = 5
+)
+
+library(nhanesA)
+```
+
+<br />
+
+# Overview
+
+`nhanesqc` provides quick, structured quality control tools for NHANES datasets,
+including:
+
+- support for CSV, XPT, and in-memory data frames  
+- variable-level summaries  
+- detection of NHANES-style special missing codes (7, 9, 77, 99, 777, 999, etc.)  
+- custom `print()`, `summary()`, and `plot()` methods  
+
+This vignette walks through a simple QC workflow using a real NHANES table.
+
+```{r library-demo}
+library(nhanesqc)
+```
+
+<br />
+
+# Getting a NHANES table
+
+In this example, we use the `nhanesA` package to download the `DEMO_H` (demographics) table:
+
+```{r load-demo, message = FALSE}
+demo_h <- nhanesA::nhanes("DEMO_H")
+
+dim(demo_h)
+head(demo_h)
+```
+
+<br />
+
+# Running QC
+
+You can pass the data frame directly to `nhanes_qc()`:
+
+```{r qc-demo}
+qc <- nhanes_qc(demo_h)
+
+qc
+```
+
+The printed output shows:
+
+- source (data frame input)  
+- number of rows and columns  
+- a preview of the variable summary  
+- a preview of variables with special missing codes
+
+<br />
+
+# Detailed summary
+
+For a more detailed text summary:
+
+```{r summary-demo}
+summary(qc)
+```
+
+This reports:
+
+- overall proportion of missing values  
+- how many variables have missing data  
+- how many variables have NHANES-style special codes  
+- the top variables by missingness and by special-code frequency  
+
+<br />
+
+# Visualizing missingness and special codes
+
+You can also visualize the QC results using the `plot()` method.
+
+## Proportion missing by variable
+
+```{r plot-missing, fig.cap = "Proportion missing by variable"}
+plot(qc, type = "missing")
+```
+
+## Proportion special codes by variable
+
+```{r plot-special, fig.cap = "Proportion NHANES-style special codes by variable"}
+plot(qc, type = "special")
+```
+
+These plots highlight variables with the most missingness or special-code usage.
+
+<br />
+
+# Interpretation and next steps
+
+`nhanesqc` focuses on **detection, not automatic recoding**:
+
+- NHANES uses different special codes for different variables  
+- Blindly recoding 7/9/77/99/etc. to `NA` risks removing valid values (e.g., age = 77)  
+
+The goal of this package is to:
+
+- help you quickly identify potential missingness patterns  
+- surface NHANES-style special codes  
+- provide a clean starting point before downstream modeling, recoding, and analysis  
+
+Future versions will explore **codebook-aware recoding** based on NHANES documentation,
+so that variable-specific rules can be applied safely and transparently.

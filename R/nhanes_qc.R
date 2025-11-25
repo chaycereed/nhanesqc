@@ -41,10 +41,10 @@ nhanes_qc <- function(
   ...
 ) {
   # Case 1: data frame / tibble input ---------------------------
-  if (is.data.frame(x)) {
+  if (inherits(x, "data.frame")) {
     df   <- janitor::clean_names(tibble::as_tibble(x))
     path <- "<data.frame input>"
-
+    
   # Case 2: character path input -------------------------------
   } else if (is.character(x) && length(x) == 1L) {
     path <- x
