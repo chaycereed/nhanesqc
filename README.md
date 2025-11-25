@@ -127,7 +127,7 @@ Use:
 summary(qc)
 ```
 
-```
+```r
 Summary of NHANES QC result
 
 Dimensions:
