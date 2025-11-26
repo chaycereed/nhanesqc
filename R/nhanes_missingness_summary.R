@@ -34,7 +34,7 @@
 #'       \item `special_codes_found`
 #'     }
 #' }
-#' @export
+#' @keywords internal
 nhanes_missingness_summary <- function(
   df,
   special_codes = c(7, 9, 77, 99, 777, 999, 7777, 9999),

@@ -16,7 +16,7 @@
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
 
 
-    <nav class="navbar navbar-expand-lg fixed-top bg-light" data-bs-theme="light" aria-label="Site navigation"><div class="container">
+    <nav class="navbar navbar-expand-lg fixed-top bg-primary" data-bs-theme="dark" aria-label="Site navigation"><div class="container">
 
     <a class="navbar-brand me-2" href="../index.html">nhanesqc</a>
 
@@ -29,18 +29,17 @@
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto">
+<li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
 <li class="nav-item"><a class="nav-link" href="../reference/index.html">Reference</a></li>
 <li class="active nav-item dropdown">
-  <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
-  <ul class="dropdown-menu" aria-labelledby="dropdown-articles">
-<li><a class="dropdown-item" href="../articles/nhanesqc-intro.html">nhanesqc: Introduction</a></li>
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-vignette" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Vignette</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-vignette">
+<li><a class="dropdown-item" href="../articles/nhanesqc-intro.html">Introduction to nhanesqc</a></li>
   </ul>
 </li>
       </ul>
 <ul class="navbar-nav">
-<li class="nav-item"><form class="form-inline" role="search">
- <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="../search.json">
-</form></li>
+<li class="nav-item"><a class="external-link nav-link" href="https://github.com/chaycereed/nhanesqc"><span class="fa fab fa-github"></span></a></li>
       </ul>
 </div>
 
@@ -57,7 +56,7 @@
       <h1>nhanesqc: Introduction</h1>
             
       
-
+      <small class="dont-index">Source: <a href="https://github.com/chaycereed/nhanesqc/blob/HEAD/vignettes/nhanesqc-intro.Rmd" class="external-link"><code>vignettes/nhanesqc-intro.Rmd</code></a></small>
       <div class="d-none name"><code>nhanesqc-intro.Rmd</code></div>
     </div>
 
@@ -83,7 +82,7 @@ tools for NHANES datasets, including:</p>
 <p>This vignette walks through a simple QC workflow using a real NHANES
 table.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">nhanesqc</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://chaycereed.github.io/nhanesqc">nhanesqc</a></span><span class="op">)</span></span></code></pre></div>
 <p><br></p>
 </div>
 <div class="section level2">

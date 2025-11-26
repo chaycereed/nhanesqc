@@ -14,7 +14,7 @@ summary(object, top_n = 10, ...)
 - object:
 
   An object of class `nhanes_qc_result`, as returned by
-  [`nhanes_qc()`](nhanes_qc.md).
+  [`nhanes_qc()`](https://chaycereed.github.io/nhanesqc/reference/nhanes_qc.md).
 
 - top_n:
 

@@ -36,7 +36,7 @@ nhanes_missingness_summary(
 - df:
 
   A data frame or tibble, typically from
-  [`read_nhanes_csv()`](read_nhanes_csv.md).
+  [`read_nhanes_csv()`](https://chaycereed.github.io/nhanesqc/reference/read_nhanes_csv.md).
 
 - special_codes:
 

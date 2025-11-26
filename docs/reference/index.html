@@ -3,7 +3,7 @@
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
 
 
-    <nav class="navbar navbar-expand-lg fixed-top bg-light" data-bs-theme="light" aria-label="Site navigation"><div class="container">
+    <nav class="navbar navbar-expand-lg fixed-top bg-primary" data-bs-theme="dark" aria-label="Site navigation"><div class="container">
 
     <a class="navbar-brand me-2" href="../index.html">nhanesqc</a>
 
@@ -15,13 +15,13 @@
     </button>
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
-      <ul class="navbar-nav me-auto"><li class="active nav-item"><a class="nav-link" href="../reference/index.html">Reference</a></li>
+      <ul class="navbar-nav me-auto"><li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+<li class="active nav-item"><a class="nav-link" href="../reference/index.html">Reference</a></li>
 <li class="nav-item dropdown">
-  <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
-  <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><a class="dropdown-item" href="../articles/nhanesqc-intro.html">nhanesqc: Introduction</a></li>
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-vignette" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Vignette</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-vignette"><li><a class="dropdown-item" href="../articles/nhanesqc-intro.html">Introduction to nhanesqc</a></li>
   </ul></li>
-      </ul><ul class="navbar-nav"><li class="nav-item"><form class="form-inline" role="search">
- <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="../search.json"></form></li>
+      </ul><ul class="navbar-nav"><li class="nav-item"><a class="external-link nav-link" href="https://github.com/chaycereed/nhanesqc"><span class="fa fab fa-github"></span></a></li>
       </ul></div>
 
 
@@ -34,7 +34,7 @@
     </div>
 
     <div class="section level2">
-      <h2 id="all-functions">All functions<a class="anchor" aria-label="anchor" href="#all-functions"></a></h2>
+      <h2 id="core-functions">Core functions<a class="anchor" aria-label="anchor" href="#core-functions"></a></h2>
 
 
 
@@ -45,13 +45,6 @@
 
       <dl><dt>
 
-          <code><a href="nhanes_missingness_summary.html">nhanes_missingness_summary()</a></code>
-
-        </dt>
-        <dd>Detect NHANES-style special missing codes (detection only)</dd>
-
-        <dt>
-
           <code><a href="nhanes_qc.html">nhanes_qc()</a></code>
 
         </dt>
@@ -59,10 +52,10 @@
 
         <dt>
 
-          <code><a href="nhanes_variable_summary.html">nhanes_variable_summary()</a></code>
+          <code><a href="summary.nhanes_qc_result.html">summary(<i>&lt;nhanes_qc_result&gt;</i>)</a></code>
 
         </dt>
-        <dd>Summarize variables in a NHANES-style data frame</dd>
+        <dd>Summary method for nhanes_qc_result objects</dd>
 
         <dt>
 
@@ -77,27 +70,6 @@
 
         </dt>
         <dd>Print method for nhanes_qc_result objects</dd>
-
-        <dt>
-
-          <code><a href="read_nhanes_csv.html">read_nhanes_csv()</a></code>
-
-        </dt>
-        <dd>Read a NHANES-style CSV file</dd>
-
-        <dt>
-
-          <code><a href="read_nhanes_xpt.html">read_nhanes_xpt()</a></code>
-
-        </dt>
-        <dd>Read a NHANES-style XPT (SAS transport) file</dd>
-
-        <dt>
-
-          <code><a href="summary.nhanes_qc_result.html">summary(<i>&lt;nhanes_qc_result&gt;</i>)</a></code>
-
-        </dt>
-        <dd>Summary method for nhanes_qc_result objects</dd>
       </dl></div>
   </main></div>
 

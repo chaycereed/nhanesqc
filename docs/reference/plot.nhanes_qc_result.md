@@ -22,7 +22,7 @@ plot(x, type = c("missing", "special"), top_n = 20, ...)
 - x:
 
   An object of class `nhanes_qc_result`, as returned by
-  [`nhanes_qc()`](nhanes_qc.md).
+  [`nhanes_qc()`](https://chaycereed.github.io/nhanesqc/reference/nhanes_qc.md).
 
 - type:
 

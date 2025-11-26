@@ -27,3 +27,4 @@ This is a general summary and does \strong{not} yet apply
 NHANES-specific missing-code logic (e.g., 7/9/77/99).
 That will be handled in a dedicated missingness function.
 }
+\keyword{internal}

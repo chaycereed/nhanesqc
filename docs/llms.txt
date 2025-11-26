@@ -213,33 +213,33 @@ A future version will include codebook-aware recoding.
 
 ------------------------------------------------------------------------
 
+## Disclaimer
+
+This package is an independent, open-source project and is not
+affiliated with or endorsed by the CDC or NHANES.
+
+------------------------------------------------------------------------
+
 ## License
 
 MIT License. See `LICENSE` for details
 
 # Package index
 
-## All functions
+## Core functions
 
-- [`nhanes_missingness_summary()`](nhanes_missingness_summary.md) :
-  Detect NHANES-style special missing codes (detection only)
-- [`nhanes_qc()`](nhanes_qc.md) : Quick QC for a NHANES-style dataset
-  (CSV, XPT, or data frame)
-- [`nhanes_variable_summary()`](nhanes_variable_summary.md) : Summarize
-  variables in a NHANES-style data frame
-- [`plot(`*`<nhanes_qc_result>`*`)`](plot.nhanes_qc_result.md) : Plot
-  method for nhanes_qc_result objects
-- [`print(`*`<nhanes_qc_result>`*`)`](print.nhanes_qc_result.md) : Print
-  method for nhanes_qc_result objects
-- [`read_nhanes_csv()`](read_nhanes_csv.md) : Read a NHANES-style CSV
-  file
-- [`read_nhanes_xpt()`](read_nhanes_xpt.md) : Read a NHANES-style XPT
-  (SAS transport) file
-- [`summary(`*`<nhanes_qc_result>`*`)`](summary.nhanes_qc_result.md) :
-  Summary method for nhanes_qc_result objects
+- [`nhanes_qc()`](https://chaycereed.github.io/nhanesqc/reference/nhanes_qc.md)
+  : Quick QC for a NHANES-style dataset (CSV, XPT, or data frame)
+- [`summary(`*`<nhanes_qc_result>`*`)`](https://chaycereed.github.io/nhanesqc/reference/summary.nhanes_qc_result.md)
+  : Summary method for nhanes_qc_result objects
+- [`plot(`*`<nhanes_qc_result>`*`)`](https://chaycereed.github.io/nhanesqc/reference/plot.nhanes_qc_result.md)
+  : Plot method for nhanes_qc_result objects
+- [`print(`*`<nhanes_qc_result>`*`)`](https://chaycereed.github.io/nhanesqc/reference/print.nhanes_qc_result.md)
+  : Print method for nhanes_qc_result objects
 
 # Articles
 
 ### All vignettes
 
-- [nhanesqc: Introduction](nhanesqc-intro.md):
+- [nhanesqc:
+  Introduction](https://chaycereed.github.io/nhanesqc/articles/nhanesqc-intro.md):

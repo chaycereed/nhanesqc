@@ -16,7 +16,7 @@
 #' @param df A data frame or tibble, typically created by [read_nhanes_csv()].
 #'
 #' @return A tibble with one row per variable and summary statistics.
-#' @export
+#' @keywords internal
 nhanes_variable_summary <- function(df) {
   if (!is.data.frame(df)) {
     stop("`df` must be a data frame or tibble.", call. = FALSE)

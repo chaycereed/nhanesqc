@@ -3,4 +3,7 @@ pkgdown: 2.2.0
 pkgdown_sha: ~
 articles:
   nhanesqc-intro: nhanesqc-intro.html
-last_built: 2025-11-25T17:24Z
+last_built: 2025-11-26T14:12Z
+urls:
+  reference: https://chaycereed.github.io/nhanesqc/reference
+  article: https://chaycereed.github.io/nhanesqc/articles

@@ -114,7 +114,7 @@ head(demo_h)
 ## Running QC
 
 You can pass the data frame directly to
-[`nhanes_qc()`](../reference/nhanes_qc.md):
+[`nhanes_qc()`](https://chaycereed.github.io/nhanesqc/reference/nhanes_qc.md):
 
 ``` r
 

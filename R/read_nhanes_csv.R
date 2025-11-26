@@ -14,7 +14,7 @@
 #' @param ... Additional arguments passed to [readr::read_csv()].
 #'
 #' @return A tibble with cleaned column names.
-#' @export
+#' @keywords internal
 read_nhanes_csv <- function(path, ...) {
   if (!file.exists(path)) {
     stop("File does not exist: ", path, call. = FALSE)

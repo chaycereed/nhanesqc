@@ -8,6 +8,7 @@ Authors@R:
 Description: Tools for quick, structured quality control of NHANES datasets,
     including variable summaries, missingness diagnostics, and detection
     of NHANES-style special missing codes.
+URL: https://chaycereed.github.io/nhanesqc, https://github.com/chaycereed/nhanesqc
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

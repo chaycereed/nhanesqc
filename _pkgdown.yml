@@ -1,4 +1,76 @@
-url: ~
+# _pkgdown.yml for nhanesqc
+
+# ------------------------------------------------------------------
+# Basic metadata
+# ------------------------------------------------------------------
+package: nhanesqc
+title: "nhanesqc"
+subtitle: "Quick, structured quality control for NHANES datasets"
+url: https://chaycereed.github.io/nhanesqc
+
+# ------------------------------------------------------------------
+# Template / theme
+# ------------------------------------------------------------------
 template:
   bootstrap: 5
+  bootswatch: flatly
+  params:
+    ganalytics: false
 
+# ------------------------------------------------------------------
+# Home page behavior
+# ------------------------------------------------------------------
+home:
+  title: "nhanesqc"
+  description: >
+    A lightweight R toolkit for quick, structured quality control of NHANES
+    datasets, including CSV, XPT, and in-memory tables.
+  links:
+    - text: GitHub repository
+      href: https://github.com/chaycereed/nhanesqc
+
+# ------------------------------------------------------------------
+# Navbar configuration
+# ------------------------------------------------------------------
+navbar:
+  structure:
+    left:  [home, reference, articles]
+    right: [github]
+
+  components:
+    home:
+      text: "Home"
+      href: index.html
+
+    reference:
+      text: "Reference"
+      href: reference/index.html
+
+    articles:
+      text: "Vignette"
+      menu:
+        - text: "Introduction to nhanesqc"
+          href: articles/nhanesqc-intro.html
+
+    github:
+      icon: fab fa-github
+      href: https://github.com/chaycereed/nhanesqc
+
+# ------------------------------------------------------------------
+# Reference organization (optional but nice)
+# ------------------------------------------------------------------
+reference:
+  - title: "Core functions"
+    contents:
+      - nhanes_qc
+      - summary.nhanes_qc_result
+      - plot.nhanes_qc_result
+      - print.nhanes_qc_result
+
+# ------------------------------------------------------------------
+# Footer (disclaimer, license, etc.)
+# ------------------------------------------------------------------
+footer:
+  text: >
+    This package is an independent, open-source project and is not affiliated
+    with or endorsed by the CDC or NHANES.

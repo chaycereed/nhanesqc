@@ -29,7 +29,7 @@ nhanes_variable_summary(df)
 - df:
 
   A data frame or tibble, typically created by
-  [`read_nhanes_csv()`](read_nhanes_csv.md).
+  [`read_nhanes_csv()`](https://chaycereed.github.io/nhanesqc/reference/read_nhanes_csv.md).
 
 ## Value
 

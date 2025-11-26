@@ -26,3 +26,4 @@ This function:
 It does \strong{not} do any recoding or NHANES-specific logic yet.
 That will be layered on top in later functions.
 }
+\keyword{internal}

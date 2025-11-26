@@ -1,0 +1,40 @@
+/* ============================================
+   Fix: dark theme argument names + metadata
+   ============================================ */
+
+/* Reference topic argument names (dt = definition term) */
+.ref-arguments dt,
+dl dt,
+dd,
+.ref-usage,
+.ref-description,
+.ref-section,
+.ref-index a {
+  color: #e6e6e6 !important;
+}
+
+/* Description text for args */
+.ref-arguments dd,
+dl dd {
+  color: #dcdcdc !important;
+}
+
+/* Function signature text */
+.ref-usage code {
+  color: #f5f5f5 !important;
+}
+
+/* Table headers (often black by default) */
+.table th {
+  color: #ffffff !important;
+}
+
+/* Code reference links */
+a code {
+  color: #e6e6e6 !important;
+}
+
+/* Highlighted items in reference index */
+.ref-index .section-title a {
+  color: #f0f0f0 !important;
+}

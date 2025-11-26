@@ -2,4 +2,5 @@
 
 ### All vignettes
 
-- [nhanesqc: Introduction](nhanesqc-intro.md):
+- [nhanesqc:
+  Introduction](https://chaycereed.github.io/nhanesqc/articles/nhanesqc-intro.md):

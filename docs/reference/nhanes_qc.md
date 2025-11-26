@@ -9,18 +9,18 @@ High-level helper that:
   - reads a NHANES-style file (CSV or XPT)
 
 - summarizes variables with
-  [`nhanes_variable_summary()`](nhanes_variable_summary.md)
+  [`nhanes_variable_summary()`](https://chaycereed.github.io/nhanesqc/reference/nhanes_variable_summary.md)
 
 - detects NHANES-style special missing codes with
-  [`nhanes_missingness_summary()`](nhanes_missingness_summary.md)
+  [`nhanes_missingness_summary()`](https://chaycereed.github.io/nhanesqc/reference/nhanes_missingness_summary.md)
 
 Supported inputs:
 
 - Character path to `.csv` files via
-  [`read_nhanes_csv()`](read_nhanes_csv.md)
+  [`read_nhanes_csv()`](https://chaycereed.github.io/nhanesqc/reference/read_nhanes_csv.md)
 
 - Character path to `.xpt` (SAS transport) files via
-  [`read_nhanes_xpt()`](read_nhanes_xpt.md)
+  [`read_nhanes_xpt()`](https://chaycereed.github.io/nhanesqc/reference/read_nhanes_xpt.md)
 
 - A data frame or tibble already in memory (e.g., from
   [`nhanesA::nhanes()`](https://rdrr.io/pkg/nhanesA/man/nhanes.html))
@@ -50,7 +50,7 @@ nhanes_qc(
 - special_codes:
 
   A vector of special missing codes to scan for. Passed to
-  [`nhanes_missingness_summary()`](nhanes_missingness_summary.md).
+  [`nhanes_missingness_summary()`](https://chaycereed.github.io/nhanesqc/reference/nhanes_missingness_summary.md).
 
 - exclude_vars:
 
@@ -79,8 +79,8 @@ A list with:
 - `data` - the loaded/processed data (tibble)
 
 - `variables` - variable-level summary (from
-  [`nhanes_variable_summary()`](nhanes_variable_summary.md))
+  [`nhanes_variable_summary()`](https://chaycereed.github.io/nhanesqc/reference/nhanes_variable_summary.md))
 
 - `missingness` - missingness + special-code detection summary (from
-  [`nhanes_missingness_summary()`](nhanes_missingness_summary.md),
+  [`nhanes_missingness_summary()`](https://chaycereed.github.io/nhanesqc/reference/nhanes_missingness_summary.md),
   `$summary` component)

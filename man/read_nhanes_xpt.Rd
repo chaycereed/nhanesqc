@@ -23,3 +23,4 @@ This function:
 \item cleans column names (snake_case, lowercase) using janitor
 }
 }
+\keyword{internal}

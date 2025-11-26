@@ -11,7 +11,7 @@
 #' @param ... Additional arguments passed to [haven::read_xpt()].
 #'
 #' @return A tibble with cleaned column names.
-#' @export
+#' @keywords internal
 read_nhanes_xpt <- function(path, ...) {
   if (!file.exists(path)) {
     stop("File does not exist: ", path, call. = FALSE)

@@ -3,8 +3,4 @@
 S3method(plot,nhanes_qc_result)
 S3method(print,nhanes_qc_result)
 S3method(summary,nhanes_qc_result)
-export(nhanes_missingness_summary)
 export(nhanes_qc)
-export(nhanes_variable_summary)
-export(read_nhanes_csv)
-export(read_nhanes_xpt)
